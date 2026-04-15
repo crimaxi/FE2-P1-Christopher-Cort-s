@@ -121,6 +121,20 @@ main {
     line-height: 1.6;
 }
 
+.benefit-image {
+    display: block;
+    margin: 1rem auto 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.benefit-image:hover {
+    transform: scale(1.05);
+}
+
 #specs {
     background: white;
     border-radius: 10px;
@@ -177,6 +191,48 @@ main {
 #advantages p {
     font-size: 1.1rem;
     line-height: 1.6;
+}
+
+#games {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#games:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+#games h2 {
+    color: #2196F3;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#games p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.game-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.game-image:hover {
+    transform: scale(1.05);
 }
 
 #product-sheet {
@@ -322,7 +378,7 @@ footer {
         padding: 1rem;
         gap: 1rem;
     }
-    #features, #benefits, #advantages, #product-sheet, #purchase {
+    #features, #benefits, #advantages, #games, #product-sheet, #purchase {
         padding: 1.5rem;
     }
     #features ul, #specs ul {
@@ -356,9 +412,13 @@ footer {
         padding: 0.5rem;
         gap: 0.5rem;
     }
-    #features, #benefits, #advantages, #product-sheet, #purchase {
+    #features, #benefits, #advantages, #games, #product-sheet, #purchase {
         padding: 1rem;
         border-radius: 8px;
+    }
+    #features h2, #benefits h2, #advantages h2, #games h2, #product-sheet h2, #purchase h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
     }
     .product-images {
         flex-direction: column;
