@@ -139,6 +139,43 @@ main {
     line-height: 1.6;
 }
 
+#product-sheet {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+#product-sheet h2 {
+    color: #2196F3;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#product-sheet table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#product-sheet th, #product-sheet td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#product-sheet th {
+    background: #f9f9f9;
+    font-weight: bold;
+    color: #333;
+}
+
+#product-sheet td {
+    background: white;
+}
+
 #purchase {
     background: white;
     border-radius: 10px;
@@ -193,7 +230,7 @@ footer {
         padding: 1rem;
         gap: 1rem;
     }
-    #features, #benefits, #specs, #advantages, #purchase {
+    #features, #benefits, #advantages, #product-sheet, #purchase {
         padding: 1.5rem;
     }
     #features ul, #specs ul {
@@ -227,11 +264,11 @@ footer {
         padding: 0.5rem;
         gap: 0.5rem;
     }
-    #features, #benefits, #specs, #advantages, #purchase {
+    #features, #benefits, #advantages, #product-sheet, #purchase {
         padding: 1rem;
         border-radius: 8px;
     }
-    #features h2, #benefits h2, #specs h2, #advantages h2, #purchase h2 {
+    #features h2, #benefits h2, #advantages h2, #product-sheet h2, #purchase h2 {
         font-size: 1.5rem;
         margin-bottom: 0.75rem;
     }
