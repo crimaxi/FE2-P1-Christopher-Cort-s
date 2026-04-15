@@ -1,20 +1,39 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     color: #333;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 3rem 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    opacity: 0.1;
 }
 
 header h1 {
@@ -38,12 +57,19 @@ main {
 }
 
 #features {
-    background: white;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#features:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 #features h2 {
@@ -69,12 +95,19 @@ main {
 }
 
 #benefits {
-    background: white;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#benefits:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 #benefits h2 {
@@ -120,12 +153,19 @@ main {
 }
 
 #advantages {
-    background: white;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#advantages:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 #advantages h2 {
@@ -140,12 +180,19 @@ main {
 }
 
 #product-sheet {
-    background: white;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#product-sheet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 #product-sheet h2 {
@@ -172,33 +219,46 @@ main {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 #product-sheet th, #product-sheet td {
     padding: 0.75rem;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e0e0e0;
     vertical-align: top;
 }
 
 #product-sheet th {
-    background: white;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     font-weight: bold;
     color: #333;
 }
 
-#product-sheet td {
+#product-sheet tr:nth-child(even) td {
+    background: #f9f9f9;
+}
+
+#product-sheet tr:nth-child(odd) td {
     background: white;
 }
 
 #purchase {
-    background: white;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%;
     max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#purchase:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 #purchase h2 {
@@ -212,20 +272,37 @@ main {
 }
 
 button {
-    background: linear-gradient(135deg, #1976D2 0%, #1565C0 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
     padding: 1rem 2rem;
     cursor: pointer;
     font-size: 1.2rem;
-    border-radius: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
 }
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
 }
 
 footer {
